@@ -1,0 +1,8 @@
+<h1>{{ title }}</h1>
+<hr />
+<h3>Counter: {{ counter }}</h3>
+<div class="buttons">
+    <app-down (click)="increaseCounter()" [downButton]="X"></app-down>
+    <app-reset (click)="increaseCounter()"></app-reset>
+    <app-up (click)="increaseCounter()" [upButton]="X"></app-up>
+</div>
