@@ -13,10 +13,18 @@ export class AppComponent {
 
     if(storedCounter) {
       this.counter = parseInt(storedCounter, 10)
+<<<<<<< HEAD
     }
 
     if(storedX) {
       this.counter = parseInt(storedX, 10)
+=======
+      this.updateBackgroundColor()
+    }
+
+    if(storedX) {
+      this.X = parseInt(storedX, 10)
+>>>>>>> a60d8c7 (changes in local storage)
     }
 
     if(soredClickCounter) {
