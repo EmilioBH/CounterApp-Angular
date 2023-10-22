@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +6,23 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  constructor(private router: Router) {}
+  constructor() {
+    const storedCounter = localStorage.getItem('counter')
+    const storedX = localStorage.getItem('X')
+    const soredClickCounter = localStorage.getItem('clickCounter')
+
+    if(storedCounter) {
+      this.counter = parseInt(storedCounter, 10)
+    }
+
+    if(storedX) {
+      this.counter = parseInt(storedX, 10)
+    }
+
+    if(soredClickCounter) {
+      this.clickCounter = parseInt(soredClickCounter, 10)
+    }
+  }
 
   public title = 'CounterApp';
   public counter: number = 0
@@ -22,6 +36,10 @@ export class AppComponent {
     if (this.clickCounter % 30 === 0) {
       this.X *= 2;
     }
+
+    localStorage.setItem('counter', this.counter.toString())
+    localStorage.setItem('X', this.X.toString())
+    localStorage.setItem('clickCounter', this.clickCounter.toString())
   }
 
   updateBackgroundColor() {
