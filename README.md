@@ -1,28 +1,76 @@
-# CounterApp
+# CounterApp Documentation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
+This README provides an overview of the CounterApp we've developed following the instructions provided in the technical exercise.
 
-## Development server
+## Exercise Steps
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Step 1: Display a Counter
 
-## Code scaffolding
+In the main component, we have implemented a counter that starts at 0.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Step 2: Create the /up and /down Pages
 
-## Build
+We've created two components for the /up and /down pages and configured the routes in the routing file (app-routing.module.ts) to load their respective components. Additionally, we've added buttons on these pages to increase or decrease the counter based on the current page.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Step 3: Implement the Counter
 
-## Running unit tests
+In the main component, we've implemented the logic to increase or decrease the counter based on the current page. The page background changes when the counter reaches 10 or -10. We've also implemented logic to update X2 the increase/decrease buttons every 30 actions.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Step 5: Add the /reset Page
 
-## Running end-to-end tests
+We've created a new component for the /reset page. On this page, we've added a button that resets the counter to zero.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Step 6: Navigation Between Pages
 
-## Further help
+We've added navigation links or buttons in the /up and /down components to enable navigation between the /up, /down, and /reset pages.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# CounterApp-Angular
+### Step 7: Counter Persistence
+
+We've used browser's local storage (localStorage) to ensure the counter retains its value even after changing or refreshing the page.
+
+### Step 8: Testing and Documentation
+
+We've conducted functional and navigation testing to ensure the application meets all requirements. We've also documented the code and explained our design decisions.
+
+## How to Run
+
+To run the application, follow these steps:
+
+1. Clone this repository to your local machine.
+
+2. Open a terminal in the root folder of the application.
+
+3. Execute the following command to install dependencies:
+   ```
+   npm install
+   ```
+
+4. Run the application on a local server with the following command:
+   ```
+   ng serve
+   ```
+
+5. Open your browser and navigate to `http://localhost:4200/` to interact with the application.
+
+## Technologies Used
+
+- Angular 2+
+- HTML
+- CSS
+- TypeScript
+- LocalStorage for data persistence
+
+## Usage Examples
+
+Here are some examples of how to interact with the application:
+
+- Navigate between the /up, /down, and /reset pages using navigation links or buttons.
+- Click the buttons on the /up and /down pages to increase or decrease the counter.
+- Observe how the page background changes color when the counter reaches 10 or -10.
+- On the /reset page, click the button to reset the counter to zero.
+
+Enjoy exploring the application!
+
+## License
+
+This project is distributed under the MIT License. Please refer to the LICENSE.md file for more information.
